@@ -9,7 +9,7 @@ const Home = () => {
         <div className='home'> 
             <header>
                 <section>
-                    <h2>Bem vindo ao website da melhor <br></br>pastelaria do Brasil, <br></br> 
+                    <h2>Bem vindo ao website da melhor <br></br><span>pastelaria do Brasil</span>, <br></br> 
                         fique a vontade para explorar <br></br>nosso cardapio com incriveis 
                         sabores e otimos precos!
                     </h2>

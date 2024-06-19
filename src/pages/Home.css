@@ -27,6 +27,10 @@
     color: #fbfbfb;
 }
 
+.home header section span{
+    color: #d82218
+}
+
 .home header section button{
     padding: 1rem 2rem;
     font-size: 20px;
