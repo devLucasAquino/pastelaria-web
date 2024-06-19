@@ -5,6 +5,10 @@
     padding: 8rem;
 }
 
+.home header img{
+    border-radius: 50px 280px 50px 280px;
+}
+
 .home header section{
     display: flex;
     flex-direction: column;
