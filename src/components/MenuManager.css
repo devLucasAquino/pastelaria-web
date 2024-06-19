@@ -1,0 +1,25 @@
+.list-container{
+    width: 50%;
+    height: auto;
+    
+}
+
+.item-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+    margin-bottom: 0.8rem;
+    border: 2px solid #810000;
+    border-radius: 10px;
+    background-color: #121212;
+}
+
+.item-menu h3{
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+.item-menu h3 span{
+    color: #bd0f06;
+}
