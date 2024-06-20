@@ -20,6 +20,21 @@ const data = [
         'sabor': 'PEPERONNI',
         'preco': 19.99
     },
+    {
+        'id': 4,
+        'sabor': 'pizza',
+        'preco': 15.99
+    },
+    {
+        'id': 5,
+        'sabor': 'frango com catupiry',
+        'preco': 15.99
+    },
+    {
+        'id': 6,
+        'sabor': 'carne com queijo',
+        'preco': 16.99
+    },
 
 ];
 

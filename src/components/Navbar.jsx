@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { SiIfood } from "react-icons/si";
 import { BiSearchAlt2 } from "react-icons/bi";
@@ -8,10 +8,16 @@ import './Navbar.css';
 
 
 const Navbar = () => {
-    const [pastry, setPastry] = useState('');
+    const [pastryName, setPastryName] = useState('');
+    const navigate = useNavigate();
 
-    function handleSubmit(){
+    function handleSubmit(e) {
+        e.preventDefault();
+        
+        if (!pastryName) return;
 
+        navigate(`/pastry?q=${pastryName}`);
+        setPastryName('');
     }
 
 
@@ -31,8 +37,8 @@ const Navbar = () => {
             <input  
                 type="text" 
                 placeholder="Search an Pastry" 
-                onChange={(e) => setPastry(e.target.value)}
-                value={pastry}
+                onChange={(e) => setPastryName(e.target.value)}
+                value={pastryName}
             />
             <button type="submit">
                 <BiSearchAlt2 />
