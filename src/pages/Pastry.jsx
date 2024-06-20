@@ -29,8 +29,8 @@ const Pastry = () => {
         <div>
             {pastry ? (
                 <div>
-                    <h2>Sabor: {pastry.sabor}</h2>
-                    <h3>Preço: R${pastry.preco.toFixed(2)}</h3>
+                    <h2>Pastel de {pastry.sabor}</h2>
+                    <h3>somente por R${pastry.preco.toFixed(2)}</h3>
                 </div>
             ) : notFound ? (
                 <h2>Pastel não encontrado</h2>
