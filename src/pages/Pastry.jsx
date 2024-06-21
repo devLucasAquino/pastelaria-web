@@ -45,7 +45,9 @@ const Pastry = () => {
                     </div>     
                 </div>
             ) : notFound ? (
-                <h2>Pastel não encontrado</h2>
+                <div className='not-found-container'>
+                    <h2>PASTEL COM SABOR: <span>{query}</span> <br></br>NAO ESTA INCLUSO NO CARDAPIO</h2>
+                </div>
             ) : (
                 <h2>Digite um sabor de pastel para pesquisar</h2>
             )}

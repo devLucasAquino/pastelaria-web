@@ -57,3 +57,21 @@
     color: #f8cd32;
 }
 
+.not-found-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+}
+
+.not-found-container h2{
+    padding: 2.8rem;
+    font-size: 2rem;
+    line-height: 3.5rem;
+    border: 2px solid #810000
+}
+
+.not-found-container span{
+    margin: 2rem;
+    color: #810000;
+}
