@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import MenuManager from '../../components/MenuManager.jsx';
+import MenuManager from '../../components/MenuManager/MenuManager.jsx';
 import data from '../../data.js';
 
 import './Menu.css';
