@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App.jsx'
 
-import Home from './pages/Home.jsx';
-import Menu from './pages/Menu.jsx';
-import Pastry from './pages/Pastry.jsx';
+import Home from './pages/Home/Home.jsx';
+import Menu from './pages/Menu/Menu.jsx';
+import Pastry from './pages/Pastry/Pastry.jsx';
 
 import './index.css'
 

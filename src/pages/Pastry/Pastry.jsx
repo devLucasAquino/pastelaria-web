@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router';
 
-import data from "../data.js";
-import onlyPastry from '../assets/img/pastryOnMenu.webp';
+import data from "../../data.js";
+import onlyPastry from '../../assets/img/pastryOnMenu.webp';
 
 import './Pastry.css';
 

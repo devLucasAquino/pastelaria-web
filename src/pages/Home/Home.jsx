@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import Pastel from '../assets/img/brasileiro-pastel.webp';
+import Pastel from '../../assets/img/brasileiro-pastel.webp';
 
 import './Home.css';
 

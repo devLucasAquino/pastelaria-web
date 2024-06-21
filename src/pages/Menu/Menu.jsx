@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
-import MenuManager from '../components/MenuManager.jsx';
-import data from '../data.js';
+import MenuManager from '../../components/MenuManager.jsx';
+import data from '../../data.js';
 
 import './Menu.css';
 
