@@ -1,3 +1,29 @@
-.footer{
+footer{
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 15rem;
+    gap: 15rem;
     border-top: 2px solid #bd0f06;
+}
+
+footer .contatos{
+    width: auto;
+    height: auto;
+    text-align: ;
+}
+
+footer .contatos li{
+    list-style: none;
+}
+
+footer .contatos p{
+    margin-top: 0.3rem;
+    font-size: 1.1rem;
+    text-wrap: wrap;
+}
+
+footer .description p{
+    text-align: center;
 }
