@@ -1,0 +1,59 @@
+.only-pastry-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+.only-pastry-container 
+.found-pastry{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4rem 0 20rem 0;
+    gap: 3.5rem;
+}
+
+.only-pastry-container
+.found-pastry
+.found-pastry-data{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.only-pastry-container 
+.found-pastry img{
+    border-radius: 150px;
+}
+
+.only-pastry-container 
+.found-pastry h2{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    padding: 0.7rem;
+    border-bottom: 4px solid #f8cd32;
+}
+
+.only-pastry-container 
+.found-pastry h3{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.only-pastry-container 
+.found-pastry 
+#original-value{
+    text-decoration: line-through;
+    color: #810000;
+    padding: 5px;
+}
+
+.only-pastry-container 
+.found-pastry 
+#value-desconto{
+    font-size: 2.5rem;
+    margin-left: 1.5rem;
+    color: #f8cd32;
+}
+
