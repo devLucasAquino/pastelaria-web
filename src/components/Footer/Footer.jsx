@@ -22,9 +22,10 @@ const Footer = () => {
                 </ul>
             </div>
             <div className="description">
+                <h4>SOBRE NOS</h4>
                 <p>somos uma pastelaria familiar e tradicional,
                 estamos nesse ramo a muitos anos e fazemos 
-                nossos produtos com muito amor, carinho e experiencia,
+                nossos produtos com muito amor, carinho e dedicacao,
                 com os mesmos ingredientes que se controi um amor verdadeiro e duradouro.</p>
                 <div className="rated">
                     <FaStar />

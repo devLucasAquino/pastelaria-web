@@ -4,14 +4,32 @@ footer{
     align-items: center;
     justify-content: center;
     padding: 6rem 15rem;
-    gap: 15rem;
     border-top: 2px solid #bd0f06;
 }
 
+footer p{
+    color: #7d7d7d;
+}
+
+footer p:hover{
+    color: #fbfbfb41;
+    cursor: pointer;
+}
+
+footer h4{
+    color: #810000;
+    margin-bottom: 2rem;
+}
+
 footer .contatos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem;
     width: auto;
     height: auto;
-    text-align: ;
+    text-align: left;
+    border-right: 2px solid #810000;
 }
 
 footer .contatos li{
@@ -19,11 +37,38 @@ footer .contatos li{
 }
 
 footer .contatos p{
-    margin-top: 0.3rem;
+    margin-top: 0.8rem;
     font-size: 1.1rem;
-    text-wrap: wrap;
+    white-space: nowrap;
+}
+
+footer .contatos p svg{
+    margin-right: 0.5rem;
+}
+
+footer .description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5rem;
 }
 
 footer .description p{
     text-align: center;
+    margin-bottom: 2rem;
+    line-height: 1.3rem;
+}
+
+footer .rated{
+    display: flex;
+}
+
+footer .rated p{
+    font-size: 14px;
+    margin-left: 0.5rem;
+}
+
+footer .rated svg{
+    color: #f8cd32;
 }
