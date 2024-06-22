@@ -1,25 +1,15 @@
-import React, { useState } from 'react';
 import { Drawer, List, ListItem, ListItemIcon, ListItemText, IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 
-const Order = ({check}) =>{ 
-
-    const [ isOpen, setIsOpen ] = useState(check)
-
-    const toggleDrawer = (open) => (event) => {
-        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-          return;
-        }
-        setIsOpen(open);
-      };
+const Order = ({isOpen, toggleDrawer}) =>{ 
 
   const list = () => (
     <div
       role="presentation"
-      onClick={toggleDrawer(check)}
-      onKeyDown={toggleDrawer(check)}
+      onClick={toggleDrawer(false)}
+      onKeyDown={toggleDrawer(false)}
     >
       <List>
         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (

@@ -12,7 +12,6 @@ import './Pastry.css';
 
 const Pastry = () => {
     const [ pastry, setPastry ] = useState(null);
-    const [notFound, setNotFound] = useState(false);
     const [ isOpenOrder, setIsOpenOrder ] = useState(false);
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
@@ -23,10 +22,8 @@ const Pastry = () => {
             const foundPastry = data.find(p => p.sabor.toLowerCase() === query.toLowerCase());
             if (foundPastry) {
                 setPastry(foundPastry);
-                setNotFound(false);
             } else {
                 setPastry(null);
-                setNotFound(true);
             }
         }
     }, [query]);
@@ -36,13 +33,13 @@ const Pastry = () => {
         return output;
     }
 
-
     const toggleDrawer = (open) => (event) => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
           return;
         }
         setIsOpenOrder(open);
       };
+
 
     return(
         <div className='only-pastry-container'>
@@ -54,10 +51,10 @@ const Pastry = () => {
                         <h3>de  <span id='original-value'>R${sale(pastry.preco)}  </span> 
                             por apenas <span id='value-desconto'>R${pastry.preco.toFixed(2)}</span></h3>
                     </div>
-                    <button onClick={toggleDrawer(true)}>
+                    <button >
                         <FaShoppingCart />    
                     </button>
-                    {isOpenOrder && <Order check={isOpenOrder} />}
+                    {isOpenOrder && <Order isOpen={isOpenOrder} toggleDrawer={toggleDrawer(true)}/>}
                 </div>
             ) : (
                 <div className='not-found-container'>
