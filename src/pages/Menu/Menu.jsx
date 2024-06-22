@@ -11,7 +11,6 @@ const Menu = () => {
 
     function getData(){
         const pastryList = data;
-        console.log(pastryList);
         return pastryList;
     }
 
