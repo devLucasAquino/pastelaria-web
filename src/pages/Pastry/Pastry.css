@@ -58,6 +58,31 @@
     color: #f8cd32;
 }
 
+.only-pastry-container
+.found-pastry button{
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 2px solid #fbfbfb;
+    background-color: #1c1;
+    color: #000;
+    display: flex;
+    align-items: center;
+}
+
+.only-pastry-container
+.found-pastry button:hover{
+    cursor: pointer;
+    color: #fbfbfb;
+}
+
+.only-pastry-container
+.found-pastry svg{
+    width: 3rem;
+    height: 3rem;
+}
+
 .not-found-container{
     display: flex;
     align-items: center;

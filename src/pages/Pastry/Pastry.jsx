@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router';
 
+import { FaShoppingCart } from "react-icons/fa";
+
+import Order from '../../components/Order/Order.jsx';
+
 import data from "../../data.js";
 import onlyPastry from '../../assets/img/pastryOnMenu.webp';
 
@@ -9,6 +13,7 @@ import './Pastry.css';
 const Pastry = () => {
     const [ pastry, setPastry ] = useState(null);
     const [notFound, setNotFound] = useState(false);
+    const [ isOpenOrder, setIsOpenOrder ] = useState(false);
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
     const query = searchParams.get('q');
@@ -32,6 +37,12 @@ const Pastry = () => {
     }
 
 
+    const toggleDrawer = (open) => (event) => {
+        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+          return;
+        }
+        setIsOpenOrder(open);
+      };
 
     return(
         <div className='only-pastry-container'>
@@ -42,14 +53,16 @@ const Pastry = () => {
                         <h2>Pastel de {pastry.sabor}</h2>
                         <h3>de  <span id='original-value'>R${sale(pastry.preco)}  </span> 
                             por apenas <span id='value-desconto'>R${pastry.preco.toFixed(2)}</span></h3>
-                    </div>     
-                </div>
-            ) : notFound ? (
-                <div className='not-found-container'>
-                    <h2>PASTEL COM SABOR: <span>{query}</span> <br></br>NAO ESTA INCLUSO NO CARDAPIO</h2>
+                    </div>
+                    <button onClick={toggleDrawer(true)}>
+                        <FaShoppingCart />    
+                    </button>
+                    {isOpenOrder && <Order check={isOpenOrder} />}
                 </div>
             ) : (
-                <h2>Digite um sabor de pastel para pesquisar</h2>
+                <div className='not-found-container'>
+                    <h2>PASTEL COM SABOR: <span>{query}</span> <br></br>NAO ESTA INCLUSO NO CARDAPIO</h2>
+                </div>               
             )}
         </div>
     )
