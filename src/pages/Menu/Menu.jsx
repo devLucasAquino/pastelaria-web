@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { api } from "../../lib/axios.js";
 
 import MenuManager from '../../components/MenuManager/MenuManager.jsx';
-import data from '../../data.js';
 
 import './Menu.css';
 
@@ -15,8 +14,7 @@ const Menu = () => {
         api.get(`/pasteis`).then(response => {
             setMenu(response.data)
         })
-
-
+              
     }, []);
 
 
