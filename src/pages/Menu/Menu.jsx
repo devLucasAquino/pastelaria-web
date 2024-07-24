@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { api } from "../../lib/axios.js";
 
 import MenuManager from '../../components/MenuManager/MenuManager.jsx';
 import data from '../../data.js';
@@ -9,13 +10,13 @@ const Menu = () => {
 
     const [ menu, setMenu ] = useState([]);
 
-    function getData(){
-        const pastryList = data;
-        return pastryList;
-    }
 
     useEffect(() => {
-        setMenu(getData());
+        api.get(`/pasteis`).then(response => {
+            setMenu(response.data)
+        })
+
+
     }, []);
 
 
