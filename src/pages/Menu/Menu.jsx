@@ -9,7 +9,6 @@ const Menu = () => {
 
     const [ menu, setMenu ] = useState([]);
 
-
     useEffect(() => {
         api.get(`/pasteis`).then(response => {
             setMenu(response.data)

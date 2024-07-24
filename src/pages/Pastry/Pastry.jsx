@@ -3,43 +3,41 @@ import { useLocation } from 'react-router';
 
 import { FaShoppingCart } from "react-icons/fa";
 
-import Order from '../../components/Order/Order.jsx';
-
-import data from "../../data.js";
+import { api } from '../../lib/axios.js';
 import onlyPastry from '../../assets/img/pastryOnMenu.webp';
 
 import './Pastry.css';
 
 const Pastry = () => {
     const [ pastry, setPastry ] = useState(null);
-    const [ isOpenOrder, setIsOpenOrder ] = useState(false);
+
+    const [ menu, setMenu ] = useState([]);
+
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
     const query = searchParams.get('q');
 
     useEffect(() => {
-        if (query) {
-            const foundPastry = data.find(p => p.sabor.toLowerCase() === query.toLowerCase());
+        api.get(`/pasteis`).then(response => {
+            setMenu(response.data)
+        })
+    }, [])
+
+    useEffect(() => {
+        if (query && menu.length > 0) {
+            const foundPastry = menu.find(p => p.sabor.toLowerCase() === query.toLowerCase());
             if (foundPastry) {
                 setPastry(foundPastry);
             } else {
                 setPastry(null);
             }
         }
-    }, [query]);
+    }, [query, menu]);
 
     function sale(number){
         const output = (number + 2).toFixed(2);
         return output;
     }
-
-    const toggleDrawer = (open) => (event) => {
-        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-          return;
-        }
-        setIsOpenOrder(open);
-      };
-
 
     return(
         <div className='only-pastry-container'>
@@ -54,7 +52,6 @@ const Pastry = () => {
                     <button >
                         <FaShoppingCart />    
                     </button>
-                    {isOpenOrder && <Order isOpen={isOpenOrder} toggleDrawer={toggleDrawer(true)}/>}
                 </div>
             ) : (
                 <div className='not-found-container'>

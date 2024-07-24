@@ -1,5 +1,4 @@
 const data = [
-    
     {
         'id': 0,
         'sabor': 'QUEIJO',
