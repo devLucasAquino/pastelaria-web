@@ -6,14 +6,15 @@ import MenuManager from '../../components/MenuManager/MenuManager.jsx';
 import './Menu.css';
 
 const Menu = () => {
-
+    
     const [ menu, setMenu ] = useState([]);
 
     useEffect(() => {
+        window.scrollTo(0, 0);
+
         api.get(`/pasteis`).then(response => {
             setMenu(response.data)
-        })
-              
+        })    
     }, []);
 
 

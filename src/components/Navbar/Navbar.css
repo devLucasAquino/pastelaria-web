@@ -24,7 +24,8 @@
     border: none;
 }
 
-.navbar form button{
+.navbar form button,
+.navbar #user{
     background-color: #bd0f06;
     border: 2px solid #bd0f06;
     border-radius: 4px;
@@ -37,7 +38,8 @@
     transition: 0.4s;
 }
 
-.navbar form button:hover{
+.navbar form button:hover,
+.navbar #user:hover{
     background-color: transparent;
     color: #bd0f06;
 }

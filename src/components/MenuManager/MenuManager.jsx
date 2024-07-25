@@ -10,12 +10,12 @@ const MenuManager = ({ menu }) => {
         <div className="list-container">
             {menu  &&
                     menu.map((pastry) => (
-                        <Link key={pastry.id} to={`/pastry?q=${pastry.sabor}`} className='link'>
-                            <div className="item-menu" key={pastry.id}>
+                        <div className="item-menu" key={pastry.id}>
+                            <Link key={pastry.id} to={`/pastry?q=${pastry.sabor}`} className='link'>
                                 <h3>{++count} . {pastry.sabor}</h3>
-                                <h3>preco: <span> {pastry.preco} </span></h3> 
-                            </div>
-                        </Link>
+                            </Link>
+                            <h3>preco: <span> {pastry.preco.toFixed(2)} </span></h3> 
+                        </div>
                     ))}
         </div>
         
