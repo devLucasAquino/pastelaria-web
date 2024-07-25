@@ -1,10 +1,31 @@
 
-import "./UserModal.css"
+import { BiUser,  } from "react-icons/bi";
+import { MdEmail } from "react-icons/md";
+import { IoClose } from "react-icons/io5";
+
+import "./UserModal.css";
 
 const UserModal = () => {
     return(
         <div className="user-modal-container">
-            <h1>hello world</h1>
+            <div id="header-modal">
+                <h3>Faça seu login</h3>
+                <button>
+                    <IoClose />
+                </button>
+            </div>
+            <form>
+                <label>Nome</label>
+                <div>
+                    <BiUser />
+                    <input type="text" />
+                </div>
+                <label>E-mail</label>
+                <div>
+                    <MdEmail />
+                    <input type="email" />
+                </div>
+            </form>
         </div>
     )
 }

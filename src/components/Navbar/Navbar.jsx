@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import PropTypes from 'prop-types';
 
 import { SiIfood } from "react-icons/si";
 import { BiSearchAlt2, BiUser } from "react-icons/bi";

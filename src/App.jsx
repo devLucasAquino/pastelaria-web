@@ -10,16 +10,16 @@ import './App.css'
 
 function App() {
 
-  const [ userModalOpen, setUserModalOpen ] = useState(false);
+  const [ userModalOpen, setUserModalOpen ] = useState(true);
 
   
 
   return (
     <div className="App">
       <Navbar setUserModalOpen={setUserModalOpen} />
+      {userModalOpen && < UserModal />}
       <Outlet />
       <Footer />
-      {userModalOpen && < UserModal />}
     </div>
   )
 }

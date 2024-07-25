@@ -1,5 +1,12 @@
 #user-modal-container{
-    width: 600px;
+    width: 500px;
     height: 360px;
     background-color: #4c4c4c;
+    position: fixed;
+}
+
+#header-modal{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
