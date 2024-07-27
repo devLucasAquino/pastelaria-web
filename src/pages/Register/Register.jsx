@@ -1,11 +1,10 @@
-
 import { BiUser,  } from "react-icons/bi";
 import { MdEmail } from "react-icons/md";
 import { IoClose } from "react-icons/io5";
 
-import "./UserModal.css";
+import "./Register.css";
 
-const UserModal = () => {
+const Register = () => {
     return(
         <div className="user-modal-container">
             <div id="header-modal">
@@ -30,4 +29,4 @@ const UserModal = () => {
     )
 }
 
-export default UserModal;
+export default Register;

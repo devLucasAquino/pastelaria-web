@@ -21,11 +21,6 @@ const Navbar = ({ setUserModalOpen }) => {
         setPastryName('');
     }
 
-    function openUserModal(){
-        setUserModalOpen(true);
-    }
-    
-
     return(
         <nav className="navbar">
             <h2 id="logotipo">
@@ -48,9 +43,11 @@ const Navbar = ({ setUserModalOpen }) => {
             <button type="submit">
                 <BiSearchAlt2 />
             </button>
-            <button onClick={openUserModal} id="user">
-                <BiUser />
-            </button>
+            <Link to={'/register'}>
+                <button id="user">
+                    <BiUser />
+                </button>
+            </Link>
             </form>
 
             
